@@ -1,4 +1,4 @@
-## OpenChime
+# OpenChime
 An open source Raspberry Pi based school bell system.
 
 I started work on this project after I learned how expensive and limited the systems on the market right now are.
@@ -7,7 +7,7 @@ OpenChime allows you to configure the schedule, sounds, and other settings. All 
 
 
 
-# Install instructions:
+## Install instructions:
 
 Download the openchime_v0.1.img file and flash it onto an SD card. Put the card into a Raspberry Pi from the supported Pis list.
 
@@ -54,7 +54,7 @@ OpenChime will ring at the start of each minute, (when the second hand hits 12).
 
 
 
-# Tested Raspberry Pis
+## Tested Raspberry Pis
 
 Raspberry Pi 2b
 
