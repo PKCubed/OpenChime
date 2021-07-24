@@ -54,7 +54,7 @@ OpenChime will ring at the start of each minute, (when the second hand hits 12).
 
 
 
-## Tested Raspberry Pis
+## Tested Computers and Micro Computers
 
 Raspberry Pi 2b
 
