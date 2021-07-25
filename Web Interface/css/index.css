@@ -1,0 +1,154 @@
+.info-small {
+  margin-top: 8px;
+}
+
+.info-small p {
+  margin: 8px;
+}
+
+.info-small .l1 {
+  height: 36px;
+  width: 100%;
+}
+
+.info-small .l1 .time {
+  float: left;
+}
+
+.info-small .l1 .uptime {
+  float: right;
+}
+
+.info-small .l2 {
+  height: 36px;
+  width: 100%;
+}
+
+.info-small .l2 .status {
+  float: left;
+}
+
+.info-small .l2 .internet-status {
+  float: right;
+}
+
+.info-small .l3 {
+  height: 36px;
+  width: 100%;
+}
+
+.info-small .l3 .con-type {
+  float: right;
+}
+
+.info-large {
+  width: 100%;
+  height: 75px;
+  font-size: 1.5em;
+}
+
+.info-large p {
+  margin: 8px;
+}
+
+.info-large .last-bell {
+  float: left;
+}
+
+.info-large .next-bell {
+  float: right;
+}
+
+.buttons {
+  margin: 8px;
+  text-align: center;
+}
+
+.buttons a {
+  padding: 4px;
+  border-radius: 4px;
+  margin: 8px;
+  background: darkblue;
+  color: white;
+  text-decoration: none;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.buttons a:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 400px) {
+  .buttons {
+    margin: 0;
+    padding: 0;
+    width: calc(100% - 24px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .buttons a {
+    margin-left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    width: 80px;
+  }
+  .info-small p {
+    margin: 0;
+    margin-left: 8px;
+  }
+  .info-small .l1 {
+    height: auto;
+    width: 100%;
+  }
+  .info-small .l1 .time {
+    float: none;
+  }
+  .info-small .l1 .uptime {
+    float: none;
+  }
+  .info-small .l2 {
+    height: auto;
+    width: 100%;
+  }
+  .info-small .l2 .status {
+    float: none;
+  }
+  .info-small .l2 .internet-status {
+    float: none;
+  }
+  .info-small .l3 {
+    height: auto;
+    width: 100%;
+  }
+  .info-small .l3 .con-type {
+    float: none;
+  }
+  .info-large p {
+    font-size: .9em;
+  }
+  .info-large .last-bell {
+    float: none;
+  }
+  .info-large .next-bell {
+    float: none;
+  }
+}
+
+@media screen and (max-width: 175px) {
+  .buttons {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 120px) {
+  .buttons {
+    margin-top: 100px;
+  }
+}
+/*# sourceMappingURL=index.css.map */

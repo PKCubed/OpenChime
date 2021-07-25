@@ -1,0 +1,135 @@
+@mixin fade-in($waitTime) {
+    animation: 
+        wait #{$waitTime},
+        fade-in 1s #{$waitTime};
+}
+
+@keyframes wait {
+    0% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.top {
+    padding: 1em;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px rgba(25,25,25,0.25);
+    h1 {
+        transition: top 2s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(calc(50vw - 50%),-100px);
+    }
+    h3 {
+        transition: top 2s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(calc(50vw - 50%),-100px);
+    }
+    .box {
+        @include fade-in('0.5s');
+        position: absolute;
+        margin: 0;
+        left: 0;
+        top: 0px;
+        width: 100%;
+        height: 150px;
+        background: rgba(0,0,0,0.5);
+    }
+}
+
+.desc {
+    color: white;
+    padding: 8px;
+    margin-top: 10px;
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    @media only screen and (max-width: 800px) {
+        padding: 8px;
+        text-align: center;
+        margin-top: 25px;
+    }
+    p {
+        @include fade-in('1s');
+    }
+    ul {
+        text-align: center;
+        text-decoration: none;
+        padding: 0;
+        li {
+            text-decoration: none;
+            list-style-type: none;
+        }
+        @media only screen and (min-width: 800px) {
+            margin-left: 50%;
+            transform: translate(-50%);
+            li {
+                text-decoration: unset;
+            }
+            text-align: center;
+        }
+        .f1 {@include fade-in('1.2s');}
+        .f2 {@include fade-in('1.2s');}
+        .f3 {@include fade-in('1.3s');}
+        .f4 {@include fade-in('1.4s');}
+        .f5 {@include fade-in('1.5s');}
+        .f6 {@include fade-in('1.6s');}
+    }
+    .fe {@include fade-in('2s');}
+}
+
+.demo-vid {
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: 512px;
+    height: 288px;
+    @media only screen and (max-width: 800px) {
+        width: calc(100% - 16px);
+        height: calc((100vw - 16px) * 9 / 16);
+        margin-left: 8px;
+        transform: none;
+    }
+    iframe {
+        @include fade-in('2.4s');
+    }
+}
+
+.install {
+    p {
+        @include fade-in('2.8s');
+    }
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+    a {
+        @include fade-in('3.2s');
+        background: rgba(0,0,0,0.5);
+        opacity: 1;
+        border-radius: 10px;
+        padding: 5px;
+        color: white;
+        text-decoration: none;
+        transition: opacity .5s;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+    margin-bottom: 50px;
+}
+
+.bottom {
+    @include fade-in('4s');
+    text-align: center;
+    color: white;
+    font-size: 0.5em;
+}

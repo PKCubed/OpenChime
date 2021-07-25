@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-animation: fadeColor 2s;
+          animation: fadeColor 2s;
+  background: #1100ff;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@-webkit-keyframes fadeColor {
+  0% {
+    background: black;
+  }
+  100% {
+    background: #1100ff;
+  }
+}
+
+@keyframes fadeColor {
+  0% {
+    background: black;
+  }
+  100% {
+    background: #1100ff;
+  }
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@-webkit-keyframes wait {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes wait {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade1 {
+  -webkit-animation: fade-in 1s;
+          animation: fade-in 1s;
+}
+
+.fade2 {
+  -webkit-animation: wait 1s, fade-in 1s 1s;
+          animation: wait 1s, fade-in 1s 1s;
+}
+
+.fade3 {
+  -webkit-animation: wait 2s, fade-in 1s 2s;
+          animation: wait 2s, fade-in 1s 2s;
+}
+
+.fade4 {
+  -webkit-animation: wait 3s, fade-in 1s 3s;
+          animation: wait 3s, fade-in 1s 3s;
+}
+
+.fade5 {
+  -webkit-animation: wait 4s, fade-in 1s 4s;
+          animation: wait 4s, fade-in 1s 4s;
+}
+
+.fade6 {
+  -webkit-animation: wait 5s, fade-in 1s 5s;
+          animation: wait 5s, fade-in 1s 5s;
+}
+
+.fade7 {
+  -webkit-animation: wait 6s, fade-in 1s 6s;
+          animation: wait 6s, fade-in 1s 6s;
+}
+
+.fade8 {
+  -webkit-animation: wait 7s, fade-in 1s 7s;
+          animation: wait 7s, fade-in 1s 7s;
+}
+
+.fade9 {
+  -webkit-animation: wait 8s, fade-in 1s 8s;
+          animation: wait 8s, fade-in 1s 8s;
+}
+/*# sourceMappingURL=main.css.map */
