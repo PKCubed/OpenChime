@@ -2,7 +2,7 @@
 
 I, the creater of OpenChime, am happy to solve any problems you have. Email me at peterdooga@gmail.com, or join my discord server, https://discord.gg/ZqP9ERJ.
 
-This project is not released and is not guarenteed to work on any device.
+This project is not released and is not guarenteed to work on every device.
 
 Tips:
 When using linux and some software (such as snowflake ssh), use ctrl+shift+x, ctrl+shift+c, and ctrl+shift+v instead of ctrl+x, ctrl+c, and ctrl+v
@@ -20,7 +20,7 @@ Install Raspberry Pi OS or Raspberry Pi OS lite onto a SD card of 8gb or more. D
 
 To connect OpenChime to your network, you can use either ethernet or WiFi. Ethernet is recommended, as WiFi is not built in to older Pis and can be unreliable. If you plan to use ethernet, please skip the WiFi setup step below.
 
-If you plan to use WiFi connectivity, you will also need to tell the Pi what your WiFi ssid and password is. To do this, create another file in the boot directory called "wpa_supplicant.conf". Note that the file name extension must be ".conf". Edit this file with an advanced text editor like notepad++. We need to edit this with Unix mode. In notepad++ you can select "Edit > EOL Conversion > Unix (LF)". Now insert the following text into the new empty file:
+If you plan to use WiFi connectivity, you will also need to tell the Pi what your WiFi ssid and password is. To do this, create another file in the boot directory called "wpa_supplicant.conf". Note that the file name extension must be ".conf". Edit this file with an advanced text editor like notepad++ or notepadqq for linux. We need to edit this with Unix mode. In notepad++ you can select "Edit > EOL Conversion > Unix (LF)". Now insert the following text into the new empty file:
 
 `
 network={
