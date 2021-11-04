@@ -1,6 +1,6 @@
 ## Before you start
 
-I, the creater of OpenChime, am happy to solve any problems you have. Email me at peterdooga@gmail.com, or join my discord server, https://discord.gg/ZqP9ERJ.
+I, the creater of OpenChime, am happy to help you solve any problems you have. Email me at peterdooga@gmail.com, or join my discord server, https://discord.gg/ZqP9ERJ.
 
 This project is not released and is not guarenteed to work on every device.
 
@@ -9,37 +9,20 @@ When using linux and some software (such as snowflake ssh), use ctrl+shift+x, ct
 
 ## How to install OpenChime from image
 
-Work in progress...
+Download the openchime_v1.0.img file and flash it onto an SD card using software like Etcher. Put the card into a Raspberry Pi from the supported Pis list.
 
-## How to install OpenChime from scratch
+Plug your Raspberry Pi into ethernet, or use wifi with either a wifi dongle or the built in wifi on newer Pis. For wireless connectivity, you need to set the wifi ssid and password with the configuration file on the usb drive. We'll get to that later.
 
-Note: This tutorial assumes that you are using a headless setup. The same installation can be done with the Pi's terminal or with the desktop with only some minor modifications. If you need help, as mentioned in the "Before you start" section, don't hesitate to ask for help.
+Plug your speakers or other audio device into the pi's audio jack. This is where the bell or other sounds will be outputted.
 
-To install OpenChime from scratch, you will first need to install a version of linux onto your computer. Because OpenChime is built to be used on Raspberry Pis, this installation procedure will mostly cover installing only on a Raspberry Pi or compatible board.
-Install Raspberry Pi OS or Raspberry Pi OS lite onto a SD card of 8gb or more. Don't take it out of your computer though because we need to add a few things. For headless setup, we need to enable ssh. Add a blank file called "ssh" to the boot directory. It should have no file extention. In windows, you will need to enable "File name extensions" to see that there is no file name extention on the file.
+Finally, you will need a USB drive. The USB drive should be of a greater size than 1mb, but small enough that you can format it with vfat or fat32. Format the drive with fat32.
 
-To connect OpenChime to your network, you can use either ethernet or WiFi. Ethernet is recommended, as WiFi is not built in to older Pis and can be unreliable. If you plan to use ethernet, please skip the WiFi setup step below.
+Save the file then eject and remove the USB drive from the computer. Then plug the drive into the Pi and make sure that it is the only storage device pluged in. You should only have it and possibly a wifi dongle connected.
 
-If you plan to use WiFi connectivity, you will also need to tell the Pi what your WiFi ssid and password is. To do this, create another file in the boot directory called "wpa_supplicant.conf". Note that the file name extension must be ".conf". Edit this file with an advanced text editor like notepad++ or notepadqq for linux. We need to edit this with Unix mode. In notepad++ you can select "Edit > EOL Conversion > Unix (LF)". Now insert the following text into the new empty file:
+Finaly, plug the Raspberry Pi into power. It will create some files on the USB drive. OpenChime will play it's startup sound, and the green light will blink slowly. This means that it is starting up. When its done, it will play another sound. You can then unplug the USB drive and plug it back into your computer. We need to now edit the config file as well as set the schedule link. We'll start with the config. The config file has a few options. One thing I'll change is the notifications setting. This enables or disables the sounds triggered by certain events such as on boot or when the USB drive is pluged in or unpluged. By default this should be set to True. I'll set it to False though. Don't forget to capitalize True and False. This is also where you configure the wifi ssid (name) and password.
 
-`
-network={
- ssid="<Name of your wireless LAN>"
- psk="<Password for your wireless LAN>"
-}
-`
+The schedule link also needs to be changed. By default, the schedule link is blank. To get your Google Calendar link and add it to OpenChime, you need to first create a Calendar, or, if you already have one, you can use it. Then, click on the 3 dots next to the calendar on the left bar on the main screen of Google Calendar. Then click on "Settings and sharing". You can find the ICAL link at the bottom of the calendar settings page that opens. You can copy either the public ICAL link or the private ICAL link. Both will work, but the public ical link requires you to make the Calendar public.
 
-Replace the ssid and password with your ssid and password. You can also put a lot more details about your network in here, but I will not go over that. 
+The last thing we need to change is the web user interface password, or webui password. If you do not want or do not need a web user interface, you can disable it in the config as well. It is enabled by default. The web interface allows you to view information from OpenChime, as well as manually ring a bell or refresh the calendar.
 
-Now you have finished the initial setup. You can eject and remove the SD card and insert it into your Raspberry Pi.
-If necessary, plug in the ethernet connection or wifi dongle. Then power on the Raspberry Pi by pluging in the USB cable.
-To connect to the pi, launch your favorite ssh/sftp client. winscp works great for windows, and snowflake ssh or filezilla for any other operating system. I personally recommend using snowflake ssh as it is cross platform. You can also use your terminal for ssh if you have a sftp only client.
-
-You now need to find the Raspberry Pi's IP address. The easiest way to do this is plug in a keyboard and a monitor to the Pi's usb and hdmi ports. Then type in the username, "pi", and the password, "raspberry". These are the default credentials which we will change later. Then when you see a terminal screen, type in "hostname -I" and press enter. It should show you the Pi's IP address. If this does not work for some reason, you can also do "ifconfig" in the terminal to see all the Pi's network interfaces. Note that the Pi will need access to the internet for setup. 
-
-Once you have the Pi's ip address, you can type that into your ssh/sftp client. Then if it needs a username and password, use the credentials above. ("pi", "raspberry")
-
-Now we can get your Raspberry Pi set up with OpenChime. Download the "install_scratch.zip" file from the github repository. (https://github.com/PKCubed/OpenChime) It should contain all the files needed to install OpenChime. Extract it into a directory on your computer in which you can easily access it. Use your sftp client to put in in the Pi's home/pi directory. Then go to the terminal, and type in, "cd /home/pi" then press enter. Now type in "sh dependencies.sh" and press enter. It may take quite a while to install all the dependencies.
-
-Now take the "openchime" folder from the "install_scratch" folder that you extracted and put it in the same directory as "dependencies.sh".
-
+Note: OpenChime will ring at the start of each minute for each event, (when the second hand hits 12).
