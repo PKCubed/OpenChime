@@ -12,6 +12,16 @@ OpenChime allows you to use as many custom sounds as you want. Just load any .wa
 OpenChime connects with either ethernet (recomended) and/or wifi. If you connect an ethernet cable to OpenChime, it should automatically connect. When using wifi, you will need to specify the ssid and password in the config file on the usb drive.
 
 
+
+## Before you start
+
+I, the creater of OpenChime, am happy to help you solve any problems you have. Email me at peterdooga@gmail.com, or join my discord server, https://discord.gg/ZqP9ERJ.
+
+This project is not released and is not guarenteed to work on every device.
+
+Tips:
+When using linux and some software (such as snowflake ssh), use ctrl+shift+x, ctrl+shift+c, and ctrl+shift+v instead of ctrl+x, ctrl+c, and ctrl+v
+
 ## Install instructions:
 
 Download the openchime_v1.0.img file and flash it onto an SD card using software like Etcher. Put the card into a Raspberry Pi from the supported Pis list.
