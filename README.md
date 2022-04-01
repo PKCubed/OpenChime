@@ -45,6 +45,17 @@ OpenChime will ring at the start of each minute for each event, (when the second
 
 
 
+LED Codes:
+
+on					running
+off					off
+slow blink			starting
+fast blink			error
+blink off				bell
+Long on, Short off		USB disconnected
+
+
+
 ## Troubleshooting and Help
 
 For help with anything related to OpenChime, you can post an issue on the github page, join the discord server, or email me. (peterdooga@gmail.com)
