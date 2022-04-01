@@ -47,12 +47,12 @@ OpenChime will ring at the start of each minute for each event, (when the second
 
 LED Codes:
 
-on - running
-off - off
-slow blink - starting
-fast blink - error
-blink off - bell
-Long on, Short off - USB disconnected
+on - running, 
+off - off, 
+slow blink - starting, 
+fast blink - error, 
+blink off - bell, 
+Long on Short off - USB disconnected
 
 
 
