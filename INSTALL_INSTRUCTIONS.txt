@@ -7,9 +7,30 @@ This project is not released and is not guarenteed to work on every device.
 Tips:
 When using linux and some software (such as snowflake ssh), use ctrl+shift+x, ctrl+shift+c, and ctrl+shift+v instead of ctrl+x, ctrl+c, and ctrl+v
 
-## How to install OpenChime from image
-
+## Install OpenChime from image (Not Yet Available, instructions are inaccurate)
 Download the openchime_v1.0.img or file or the latest version and flash it onto an SD card using software like Etcher. Put the card into a Raspberry Pi from the supported Pis list.
+
+## Install OpenChime from source code
+Download the OpenChime (Compressed).zip file and extract it onto a fresh install of Raspberry Pi OS with username "openchime". The OpenChime folder inside the zip file should be placed directly inside /home/openchime so that the main python file has the path /home/openchime/OpenChime/main.py.
+
+In most cases you'll need to run this command to install packages with pip (change 3.11 to your version of python `python3 --version`):
+`sudo mv /usr/lib/python3.11/EXTERNALLY-MANAGED /usr/lib/python3.11/EXTERNALLY-MANAGED.old`
+
+Install dependencies:
+- `pip install ics`
+- `pip install icalendar`
+- `pip install recurring_ical_events`
+- `pip install flask` (Should be unneccesary on most Raspberry Pi OS installs)
+- `pip install flask-httpauth`
+
+Run at Startup with Cron
+`crontab -e`
+
+paste the following line at the end of the file:
+`@reboot sudo chown openchime.openchime /sys/class/leds/led0 -R && sudo chmod 777 /sys/class/leds/led0 -R && cd /home/openchime/OpenChime/ && sudo chown openchime.openchime usb -R && sudo chmod 777 usb -R && python3 main.py`
+
+
+## Setup and Config
 
 Plug your Raspberry Pi into ethernet, or use wifi with either a wifi dongle or the built in wifi on newer Pis. For wireless connectivity, you need to set the wifi ssid and password with the configuration file on the usb drive. We'll get to that later.
 
