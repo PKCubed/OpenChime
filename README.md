@@ -5,7 +5,7 @@ I started work on this project after I learned how expensive and limited the sys
 
 OpenChime uses Google Calendar as well as a web interface to allow easy live control of the bell system and schedule. Because the bell system simply links to a Google Calendar, you can share the schedule with other people for them to view or edit. You can edit the schedule any time, and either reboot the system, or press refresh on the web user interface to update the schedule. A usb drive must also be connected. It does not need to be very large as all it does is store the audio files, configuration, and log file. Incase a problem occurs, the log file lists everything that has happened including when bells have rung, and any errors that have occured.
 
-OpenChime uses ntp, or network time protocal, for accurate time. If you have a clock system or light system that uses ntp or gps time, OpenChime should sync with those systems increadibly well. If it does not, and you would like them to sync up, you can edit the time offset in seconds in the config file on the usb drive.
+OpenChime uses ntp, or network time protocal, for accurate time. If you have a clock system or light system that uses ntp or gps time, OpenChime should sync with those systems increadibly well.
 
 OpenChime allows you to use as many custom sounds as you want. Just load any .wav file onto the usb drive and setup an event in Google Calendar with the name of the bell file (without the .wav) as the name of the event. A description is optional.
 
