@@ -64,5 +64,5 @@ For help with anything related to OpenChime, you can post an issue on the github
 
 ## Tested Computers and Micro Computers
 
-Raspberry Pi 2b
+Raspberry Pi 4b
 
