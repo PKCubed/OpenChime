@@ -27,7 +27,7 @@ Run at Startup with Cron
 `crontab -e`
 
 paste the following lines at the end of the file:
-```C++
+```
 XDG_RUNTIME_DIR=/run/user/1000
 @reboot sleep 10 && sudo chown openchime:openchime /sys/class/leds/ACT -R && sudo chmod 777 /sys/class/leds/ACT -R && cd /home/openchime/OpenChime/ && sudo chown openchime:openchime usb -R && sudo chmod 777 usb -R && python3 main.py
 # >> /home/openchime/OpenChime/cronlog.txt 2>&1
