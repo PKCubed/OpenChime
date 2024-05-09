@@ -1,0 +1,8 @@
+{
+	"google_calendar_url": "",
+	"enable_webui": "True",
+	"webui_password": "1234",
+	"wifi_ssid": "",
+	"wifi_password": "",
+	"notifications": "True"
+}

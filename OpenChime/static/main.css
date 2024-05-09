@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+:root {
+  --primary-color: #0093ffb2;
+  --navbar-color: darkblue;
+  --text-color: #ffffffff;
+  --header-color: #0b67abff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat';
+  background: var(--primary-color);
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.navbar {
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: var(--navbar-color);
+}
+
+.navbar .mobile-nav {
+  display: none;
+}
+
+.navbar .nav .nav-logo {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+.navbar .nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar .nav li {
+  float: right;
+}
+
+.navbar .nav .nav-logo {
+  float: left;
+}
+
+.navbar .nav li a {
+  display: block;
+  color: var(--text-color);
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+.navbar .nav li a.nav-hover {
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition: background-color 0.5s, font-size 2s;
+  transition: background-color 0.5s, font-size 2s;
+}
+
+.navbar .nav li a.nav-hover:hover {
+  background-color: #111;
+}
+/*# sourceMappingURL=main.css.map */

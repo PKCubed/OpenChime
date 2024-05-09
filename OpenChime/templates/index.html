@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>OpenChime Web Interface</title>
+    <!-- <meta http-equiv="refresh" content="0.01" /> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav">
+            <ul class="nav-list">
+                <a href="#" class="nav-logo">OpenChime UI</a>
+                <!-- <li><a class="nav-schedule nav-hover" href="">Schedule</a></li>
+                <li><a class="nav-config nav-hover" href="">Config</a></li>
+                <li><a class="nav-about nav-hover" href="">About</a></li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="info-small">
+        <div class="l1">
+            <p id="time" class="time">Current time: {{ web_time }}</p>
+            <p id="uptime" class="uptime">Uptime: {{ web_uptime }}</p>
+        </div>
+        <div class="l2">
+            <p id="status" class="status">Status: {{ web_status }}</p>
+            <p id="internet_status" class="internet-status">Internet status: {{ web_internet_status }}</p>
+        </div>
+        <div class="l3">
+            <p id="ip_address" class="ip-address">IP Address: {{ web_ip_address }}</p>
+            <p id="con_type" class="con-type">Connection Type: {{ web_con_type }}</p>
+        </div>
+    </div>
+    <div class="info-large">
+        <p id="last_bell" class="last-bell">Last Bell: {{ web_last_bell }}</p>
+        <p id="next_bell" class="next-bell">Next Bell: {{ web_next_bell }}</p>
+    </div>
+    <div class="buttons">
+    	   <form method="post" action="/buttons">
+            <input type="submit" name="submit_button" value="Manual Bell" class="manual-btn">
+            <select id="audio_file_dropdown" name="audio_file_dropdown">
+            {% for file in audio_files %}
+            	<option value= "{{ file }}">{{ file }}</option>
+            {% endfor %}
+            </select>
+            <input type="submit" name="submit_button" value="Refresh" class="refresh-btn">
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+</html>
