@@ -30,7 +30,7 @@ When using linux and some software (such as snowflake ssh), use ctrl+shift+x, ct
 
 ## Troubleshooting and Help
 
-For help with anything related to OpenChime, you can post an issue on the github page, join the discord server, or email me. (peterdooga@gmail.com)
+For help with anything related to OpenChime, you can post an issue on the github page, or email me at peter@pkcubed.net.
 
 LED Codes:
 
