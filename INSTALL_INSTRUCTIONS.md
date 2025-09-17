@@ -1,6 +1,6 @@
 ## Before you start
 
-I, the creater of OpenChime, am happy to help you solve any problems you have. Email me at peterdooga@gmail.com, or join my discord server, https://discord.gg/ZqP9ERJ.
+I, the creater of OpenChime, am happy to help you solve any problems you have. Email me at peter@pkcubed.net.
 
 This project is not released and is not guarenteed to work on every device.
 
