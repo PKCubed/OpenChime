@@ -22,6 +22,7 @@ Install dependencies:
 - `pip install recurring_ical_events`
 - `pip install flask` (Should be unneccesary on most Raspberry Pi OS installs)
 - `pip install flask-httpauth`
+- `pip install pyudev`
 
 Run at Startup with Cron
 `crontab -e`
@@ -33,6 +34,15 @@ XDG_RUNTIME_DIR=/run/user/1000
 # >> /home/openchime/OpenChime/cronlog.txt 2>&1
 # uncomment the line above and add to the @reboot line to enable logging
 ```
+
+Now we need to allow the python script to access the RPi LEDs. Create a new file using the command below:
+`sudo nano /etc/udev/rules.d/99-leds.rules`
+then inside that file paste the following:
+```
+SUBSYSTEM=="leds", KERNEL=="ACT", ACTION=="add", RUN+="/bin/sh -c 'chgrp -R gpio /sys%p && chmod -R g+w /sys%p'"
+```
+You'll then need to save and exit the file, then reboot the raspberry pi with
+`sudo reboot now`
 
 
 ## Setup and Config
