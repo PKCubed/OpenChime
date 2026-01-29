@@ -35,7 +35,7 @@ XDG_RUNTIME_DIR=/run/user/1000
 # uncomment the line above and add to the @reboot line to enable logging
 ```
 
-Now we need to allow the python script to access the RPi LEDs. Create a new file using the command below:
+We need to allow the python script to access the RPi LEDs. This is already handled by the crontab startup script, but we can do this in addition. Create a new file using the command below:
 `sudo nano /etc/udev/rules.d/99-leds.rules`
 then inside that file paste the following:
 ```
